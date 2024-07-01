@@ -56,7 +56,7 @@ export default function Home() {
 
           <div className="flex flex-col justify-around bg-[#A91D3A] rounded-lg p-4">
             <p className="text-4xl text-[#F0ECE5]">Start tracking your investment now</p>
-            <Link href="#" className="bg-[#F0ECE5] rounded-lg w-full py-3 uppercase text-2xl text-[#161A30]">Get Started</Link>
+            <Link href="#" className="bg-[#F0ECE5] rounded-lg w-full py-3 uppercase text-2xl text-[#161A30] text-center">Get Started</Link>
           </div>
         </article>
       </section>

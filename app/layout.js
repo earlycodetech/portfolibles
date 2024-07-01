@@ -10,7 +10,6 @@ export const metadata = {
   title: "Portfolibles",
   description: "Track Your Stcok and Crypto Investments",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
