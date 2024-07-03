@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Chakra_Petch } from "next/font/google";
+import { Footer } from "./components/Footer";
 
 const chakraPetch400 = Chakra_Petch({
   subsets:['latin'],
@@ -8,12 +9,15 @@ const chakraPetch400 = Chakra_Petch({
 
 export const metadata = {
   title: "Portfolibles",
-  description: "Track Your Stcok and Crypto Investments",
+  description: "Track Your Stock and Crypto Investments",
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={chakraPetch400.className}>{children}</body>
+      <body className={chakraPetch400.className}>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }

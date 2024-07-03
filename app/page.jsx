@@ -7,7 +7,6 @@ import { FaNoteSticky } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <>
     <main className="px-3 md:px-12 lg:px-16 bg-gradient-to-b from-[#F0ECE5] via-white to-[#B6BBC4]">
       <section className="min:h-screen md:h-screen flex flex-col justify-between gap-16 md:gap-0 pb-12">
         <nav className="flex justify-between items-center pt-3">
@@ -61,10 +60,5 @@ export default function Home() {
         </article>
       </section>
     </main>
-
-    <footer className="h-[60px] flex justify-center items-center px-3 md:px-12 lg:px-16 bg-[#31304D]">
-      <p className="text-xs text-[#F0ECE5]">&copy; {new Date().getFullYear()} All Rights Reserved. Portfolibles</p>
-    </footer>
-    </>
   );
 }
