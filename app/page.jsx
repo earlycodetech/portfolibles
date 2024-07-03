@@ -22,7 +22,7 @@ export default function Home() {
         </nav>
 
         <div className="row-span-5 flex justify-center items-center">
-          <blockquote className="w-full md:[480px] lg:w-[720px]">
+          <blockquote className="w-full md:w-[480px] lg:w-[720px]">
             <h1 className="text-5xl md:text-6xl text-[#31304D] text-center font-bold">
               <span className="text-[#A91D3A]">Track</span> All Your Stocks and Crypto Investments All One Place
             </h1>
@@ -63,7 +63,7 @@ export default function Home() {
     </main>
 
     <footer className="h-[60px] flex justify-center items-center px-3 md:px-12 lg:px-16 bg-[#31304D]">
-    <p className="text-xs text-[#F0ECE5]">&copy; {new Date().getFullYear()} All Rights Reserved. Portfolibles</p>
+      <p className="text-xs text-[#F0ECE5]">&copy; {new Date().getFullYear()} All Rights Reserved. Portfolibles</p>
     </footer>
     </>
   );
