@@ -6,7 +6,7 @@ import { BiCabinet } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
 import { db } from "@/lib/firebase.setting";
-import { getDocs,collection } from "firebase/firestore";
+import { collection,onSnapshot } from "firebase/firestore";
 import { AssetTab } from "../components/AssetTab";
 
 export default function Dashboard () {
@@ -14,18 +14,20 @@ export default function Dashboard () {
 
     useEffect(() => {
         const getAssetsData = async () => {
-            const compiledData = [];
             const q = collection(db,'assets');
-            const onSnap = await getDocs(q);
+            
+            onSnapshot(q,querySnapShot => {
+                const compiledData = [];
 
-            onSnap.docs.forEach(doc => {
-                compiledData.push({
-                    id:doc.id,
-                    data:doc.data()
-                })
+                querySnapShot.docs.forEach(doc => {
+                    compiledData.push({
+                        id:doc.id,
+                        data:doc.data()
+                    })
+                });
+
+                setAssets(compiledData)
             });
-
-            setAssets(compiledData)
         }
 
         //call the function
@@ -67,6 +69,8 @@ export default function Dashboard () {
                             holdWallet={item.data.wallet} 
                             qty={item.data.quantity}
                             tick={item.data.ticker}
+                            price={item.data.price}
+                            notes={item.data.notes}
                             key={item.id}/>
                         )
                     })}

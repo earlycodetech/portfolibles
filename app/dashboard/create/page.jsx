@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { TextField } from "@mui/material";
 import Button from '@mui/material/Button';
@@ -61,7 +61,7 @@ export default function Create () {
             createRecords()
         },
         validationSchema:rules
-    })
+    });
 
     return (
         <>
@@ -161,6 +161,10 @@ export default function Create () {
                 <DialogContentText id="alert-dialog-description">
                     Your asset was added successfully!
                 </DialogContentText>
+
+                <Link 
+                className="block bg-stone-600 py-1 px-2 text-stone-50 rounded-sm mt-4"
+                href="/dashboard">Return to Dashboard</Link>
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose}>Close</Button>
