@@ -11,7 +11,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import CircularProgress from "@mui/material/CircularProgress";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { db,storage } from "@/lib/firebase.setting";
+import { db,storage } from "@/lib/firebase";
 import { collection,addDoc,updateDoc,doc } from "firebase/firestore";
 import { ref,uploadString,getDownloadURL } from "firebase/storage";
 
