@@ -12,10 +12,7 @@ export default function Auth() {
           <p className="text-gray-700">Whether you are a new or an existing user, sign in to continue to your account</p>
           <form
           action={async () => {
-            await signIn("google",{
-              redirect:false,
-              callbackUrl:"/dashboard"
-            })
+            await signIn("google")
           }}
           className="flex flex-col gap-3">
             <button

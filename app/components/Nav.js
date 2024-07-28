@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link";
+import { NextResponse } from "next/server";
 import { SiPhotobucket } from "react-icons/si";
 import { useSession,signOut } from "next-auth/react";
 
@@ -20,8 +21,10 @@ export function Nav () {
           className="border-b-2 border-[#31304D] text-[#31304D] py-3" 
           href="/dashboard">Dashboard</Link>
           <Link 
-          onClick={() => {
-            signOut({redirect:false})
+          onClick={async () => {
+            await signOut()
+            .then((request) => NextResponse.redirect(new URL("/auth",request.url)))
+            .catch(error => console.error(error))
           }}
           className="border-b-2 border-[#31304D] text-[#31304D] py-3" 
           href="#">Sign out</Link>
