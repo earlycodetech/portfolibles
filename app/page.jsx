@@ -11,7 +11,7 @@ export default function Home() {
         <div className="row-span-5 flex justify-center items-center">
           <blockquote className="w-full md:w-[480px] lg:w-[720px]">
             <h1 className="text-5xl md:text-6xl text-[#31304D] text-center font-bold">
-              <span className="text-[#A91D3A]">Track</span> All Your Stocks and Crypto Investments All One Place
+              <span className="text-[#A91D3A]">Track</span> All Your Stocks and Crypto Investments All In One Place
             </h1>
           </blockquote>
         </div>
